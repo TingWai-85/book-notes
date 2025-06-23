@@ -117,7 +117,7 @@ body {
     overflow-x: hidden;
     z-index: 10;
     box-sizing: border-box;
-    /* display: none; */
+    display: none;
 }
 
 .result {
@@ -159,3 +159,44 @@ body {
 }
 
 /* Search Books */
+
+/* Filter Books */
+.sort-books {
+    width: 100%;
+    padding-top: 2%;
+}
+
+#filter {
+    position: relative;
+    margin-left: 1rem;
+    width: 15%;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border: 5px solid #887d5f;
+    background-color: #f3efea;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+#filter option {
+    font-size: 1rem;
+}
+
+.sort-books > form > input {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    border: 6px solid #D5C7A3;
+    border-radius: 10px;
+    background-color: #D5C7A3;
+    color: #756d55;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.sort-books > form > input:hover {
+    background-color: #a79c81;
+    border: 6px solid #a79c81;
+}
+
+/* Filter Books */

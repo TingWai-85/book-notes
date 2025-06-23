@@ -18,7 +18,7 @@
             <div class="nav-item">
                 <ul>
                     <li><a href="">Home</a></li>
-                    <li><a href="">Add/Update Books</a></li>
+                    <li><a href="">Add Books</a></li>
                 </ul>
             </div>
         </nav>
@@ -52,8 +52,22 @@
                 </div>
             </div>
         </div>
+        
+        <div class="sort-books">
+            <form>
+                <label for="filter">Sort By:</label>
+                <select name="filter" id="filter">
+                    <option>All</option>
+                    <option>Title A > Z</option>
+                    <option>Title Z > A</option>
+                    <option>Author A > Z</option>
+                    <option>Author Z > A</option>
+                </select>
+                <input type="submit" value="Filter" />
+            </form>
+        </div>
+
 
     </div>
-    <script src="./index.js"></script>
 </body>
 </html>
