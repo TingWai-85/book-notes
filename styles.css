@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +11,8 @@ body {
     font-size: 1.5rem;
 }
 
-/* Navigation Bar */
+/* Header */
+/*Navigation Bar */
 .nav-bar {
     width: 100%;
     padding-top: 2%;
@@ -43,21 +46,28 @@ body {
     color: #29261d;
     border-radius: 4px;
 }
-
+/*Navigation Bar */
+/*Logo*/
 .logo-title {
     display: flex;
     gap: 1rem;
     padding-left: 5%;
 }
-
-/* Navigation Bar */
+/*Logo*/
+/* Header */
 
 .container {
     height: auto;
     padding-left: 10%;
     padding-right: 10%;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
 }
 
+/* Introduction Paragraph */
 .introduction {
     padding-top: 2%;
 }
@@ -72,3 +82,80 @@ body {
     height: 2px;
     background-color: #29261d;
 }
+
+/* Introduction Paragraph */
+
+/* Search Books */
+.search-books {
+    text-align: center;
+    width: 100%;
+}
+
+#search-input {
+    width: 50%;
+    margin-top: 1rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    font-size: 1rem;
+    font-style: italic;
+    border: 5px solid #887d5f;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #f3efea;
+}
+
+.result-container {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    left: 30%;
+    border: 5px solid #887d5f;
+    border-top: none;
+    background-color: #f3efea;
+    border-radius: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 10;
+    box-sizing: border-box;
+    /* display: none; */
+}
+
+.result {
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.result:hover {
+    background-color: #e7dcce;
+}
+
+.result img {
+    width: 20%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.result div {
+    max-width: 60%;
+}
+
+.result div p {
+    font-size: 2rem;
+    font-weight: bold;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.result div span {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* Search Books */
