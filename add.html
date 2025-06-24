@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-Notes</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo-title">
+                <img src="./images/favicon.ico" alt="Page Icon" width="40px" />
+                <h1>Book Notes</h1>
+            </div>
+            <div class="nav-item">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Add Books</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container"> 
+        <div class="add-book">
+            <div id="get-cover">
+                <img src="./images/testing-book-cover.jpeg" alt="book cover">
+                <button>Get Book Cover</button>
+            </div>
+            <div id="book-detail">
+                <form>
+                    <label for="book-title">Book Title:</label>
+                    <input type="text" name="book-title" id="book-title" />
+
+                    <label for="book-author">Book Author:</label>
+                    <input type="text" name="book-author" id="book-author" />
+
+                    <label for="read-though">Book Reading Though:</label>
+                    <input type="text" name="read-though" id="read-though" />
+
+                    <label for="review-date">Review Date: </label>
+                    <input type="text" name="review-date" id="review-date" value="15 January 2025" disabled>
+                    
+                    <p>Review Rating: </p>
+                    <div class="rating-system">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">★</label>
+
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+                    </div>
+
+                    <input type="submit" id="submit-new-book" name="submit-new-book" value="Add"/>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>©2025 TingWai-85</p>
+    </footer>
+
+</body>
+</html>

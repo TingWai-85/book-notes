@@ -274,3 +274,90 @@ footer {
     color: #a8a6a6;
 }
 /* footer */
+
+/*add book*/
+.add-book {
+    display: flex;
+    padding-top: 2%;
+    gap: 5rem;
+}
+
+#get-cover {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+#get-cover button {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1rem;
+    border: 6px solid #D5C7A3;
+    border-radius: 10px;
+    background-color: #D5C7A3;
+    color: #756d55;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#get-cover button:hover {
+    background-color: #a79c81;
+    border: 6px solid #a79c81;
+}
+
+#book-detail form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#book-detail input[type="text"] {
+    margin: 0 0 1rem 4rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    width: 300%;
+    font-size: 1rem;
+    border: 5px solid #887d5f;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #f3efea;
+}
+
+.rating-system {
+    direction: rtl;
+    font-size: 2rem;
+}
+
+.rating-system input{
+    display: none;
+}
+
+.rating-system input:checked ~ label {
+    color: gold;
+}
+
+.rating-system label:hover {
+    color: gold;
+}
+
+.rating-system label:hover ~ label {
+    color: gold;
+}
+
+#submit-new-book {
+    width: 40%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0 0 10% 140%;
+    font-size: 1rem;
+    border: 6px solid #D5C7A3;
+    border-radius: 10px;
+    background-color: #D5C7A3;
+    color: #756d55;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#submit-new-book:hover {
+    background-color: #a79c81;
+    border: 6px solid #a79c81;
+}
+/*add book*/
