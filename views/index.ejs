@@ -1,0 +1,142 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="container">
+
+        <div class="introduction">
+            <h2>Book I Have Read</h2>
+            <p>Hi everyone, I read a lot of books but after I finish reading them I often don't remember all the most salient parts of the book. So I started taking notes. This website is mainly to record all the books I have read, including all the notes, ratings and recommendations. Hope these can help you guys to pick a good book for your next reading! &#128513;</p>
+            <hr />
+        </div>
+
+        <div class="search-books">
+            <input type="text" id="search-input" name="search-input" placeholder="Search books by title...">
+            <div class="result-container hide" id="result-container">
+                <!-- <div class="result">
+                    <img src="./assets/images/testing-book-cover.jpeg" alt="testing book title"/>
+                    <div>
+                        <p>A million to one Part 2 - defend</p>
+                        <span>By: Tony Adam</span>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <img src="./assets/images/testing-book-cover.jpeg" alt="testing book title"/>
+                    <div>
+                        <p>A million to one</p>
+                        <span>By: Tony Adam</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        
+        <div class="sort-books">
+            <form action="/books" method="get">
+                <label for="filter">Sort By:</label>
+                <select name="filter" id="filter">
+                    <option>All</option>
+                    <option>Title A > Z</option>
+                    <option>Title Z > A</option>
+                    <option>Author A > Z</option>
+                    <option>Author Z > A</option>
+                </select>
+                <input type="submit" value="Filter" />
+            </form>
+        </div>
+
+        <% booklists.forEach(book => { %>
+         
+            <div class="book-cards">
+                <div class="cards">
+
+                    <% let imageURL = "https://covers.openlibrary.org/b/isbn/" + book.isbn + "-M.jpg" %>
+
+                    <img src=<%= imageURL %> alt="book cover"> 
+                    <h2 id=<%= book.isbn %>><%= book.title %></h2>
+                    <p>By <i><%= book.author %></i></p>
+                    <br />
+                    <p><%= book.thought %></p>
+                    <br />
+                    <p class="not-float"><strong>Review Date: </strong><%= book.date %></p>
+                    <p class="not-float"><strong>Rating: </strong>
+                        <% let starred = book.rating %>
+                        <% for( let index = 0; index < 5; index++ ) { %>
+                            
+                            <% if (starred > 0) { %>
+                                <span class="star filled">★</span>
+                                <% starred -= 1 %>
+                            <% } else { %>
+                                 <span class="star">★</span>
+                            <% } %>
+                        <% } %>
+                    </p>
+                    <div class="cards-form">
+                        <form action="/editBook/<%= book.isbn %>" method="get">
+                            <button class="card-button">Edit</button>
+                        </form>
+
+                        <form action="/delete/<%= book.isbn %>" method="post">
+                            <button class="card-button">Delete</button>
+                        </form>
+                    </div>
+                    <br />
+                </div>
+
+            <% }) %>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const input = document.getElementById('search-input');
+        const result = document.getElementById('result-container');
+
+        const books = <%- JSON.stringify(booklists) %> ;
+
+        books.forEach((book) => {
+            let imageURL = "https://covers.openlibrary.org/b/isbn/" + book.isbn + "-M.jpg";
+            book.image = imageURL;
+        })
+    
+        
+
+        input.addEventListener("input",(event) => {
+            const query = input.value.trim().toLocaleLowerCase();
+            
+            result.innerHTML = "";
+
+            if (query !== ""){
+                result.classList.remove('hide');
+            } else {
+                result.classList.add('hide');
+            }
+
+            const filter = books.filter((book) => {
+                return book.title.toLocaleLowerCase().includes(query)
+            });
+            
+            
+
+            if (filter.length === 0) {
+                result.innerHTML = '<div>No books found</div>';
+            }else {
+                filter.forEach((book) => {
+                    const item = document.createElement('div');
+                    item.className = 'result';
+                    item.innerHTML = `
+                    <img src="${book.image}" alt="${book.title}"/>
+                    <a href=#${book.isbn}>
+                        <div>
+                            <p>${book.title}</p>
+                            <span>By: ${book.author}</span>
+                        </div>
+                    </a>
+                    `;
+                    result.appendChild(item);
+                });
+            }
+            
+        })
+    </script>
+
+<%- include('partials/footer.ejs') %>

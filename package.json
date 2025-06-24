@@ -1,0 +1,27 @@
+{
+  "name": "book-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TingWai-85/book-notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TingWai-85/book-notes/issues"
+  },
+  "homepage": "https://github.com/TingWai-85/book-notes#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.2"
+  }
+}

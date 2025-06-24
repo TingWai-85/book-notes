@@ -104,6 +104,10 @@ body {
     background-color: #f3efea;
 }
 
+.hide {
+    display: none;
+}
+
 .result-container {
     position: absolute;
     width: 40%;
@@ -118,7 +122,6 @@ body {
     overflow-x: hidden;
     z-index: 10;
     box-sizing: border-box;
-    display: none;
 }
 
 .result {
@@ -135,26 +138,31 @@ body {
     background-color: #e7dcce;
 }
 
+
 .result img {
     width: 20%;
     height: auto;
     border-radius: 5px;
 }
 
-.result div {
-    max-width: 60%;
+.result a {
+    all: unset;
 }
 
-.result div p {
+.result a div {
+    max-width: 100%;
+}
+
+.result a div p {
     font-size: 2rem;
     font-weight: bold;
-    max-width: 100%;
+    max-width: 400px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.result div span {
+.result a div span {
     font-size: 1.1rem;
     font-style: italic;
 }
@@ -246,6 +254,11 @@ body {
     color: #f50303dc;
 }
 
+.cards-form {
+    display: flex;
+    gap: 0.3rem;
+}
+
 .card-button {
     padding: 0.5rem 2rem 0.5rem 2rem;
     margin: 1rem 10rem 0rem 0.2rem;
@@ -282,13 +295,13 @@ footer {
     padding-left: 10%;
 }
 
-#book-detail form {
+#bookDetail form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#book-detail input[type="text"] {
+#bookDetail input[type="text"] {
     margin: 0 0 1rem 4rem;
     padding: 1rem 0.5rem 1rem 0.5rem;
     width: 300%;
@@ -299,7 +312,7 @@ footer {
     background-color: #f3efea;
 }
 
-#read-though {
+#readThough {
     margin: 0 0 1rem 4rem;
     padding: 1rem;
     width: 300%;
@@ -332,7 +345,7 @@ footer {
     color: gold;
 }
 
-#submit-new-book {
+#addUpdate {
     width: 40%;
     padding: 0.5rem 1rem 0.5rem 1rem;
     margin: 0 0 10% 140%;
@@ -345,7 +358,7 @@ footer {
     box-sizing: border-box;
 }
 
-#submit-new-book:hover {
+#addUpdate:hover {
     background-color: #a79c81;
     border: 6px solid #a79c81;
 }

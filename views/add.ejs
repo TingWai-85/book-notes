@@ -1,0 +1,48 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="container"> 
+        <div class="add-book">
+            <div id="bookDetail">
+                <form action="/addbook" method="post">
+                    <label for="bookTitle">Book Title:</label>
+                    <input type="text" name="bookTitle" id="bookTitle"  value="<%= currentData.currTitle %>" />
+
+                    <label for="bookIsbn">Book ISBN:</label>
+                    <input type="text" name="bookIsbn" id="bookIsbn" value="<%= currentData.currISBN %>" />
+
+                    <label for="bookAuthor">Book Author:</label>
+                    <input type="text" name="bookAuthor" id="bookAuthor" value="<%= currentData.currAuthor %>"  />
+
+                    <label for="readThough">Book Reading Though:</label>
+                    <textarea name="readThough" id="readThough" rows="6"><%= currentData.currThought %></textarea>
+
+                    <label for="reviewDate">Review Date: </label>
+                    <input type="text" name="reviewDate" id="reviewDate" value="<%= currentData.currDate %>" readonly>
+                    
+                    <p>Review Rating: </p>
+                    <div class="rating-system">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">★</label>
+
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+                    </div>
+
+                    <input type="submit" id="addUpdate" name="addUpdate" value="<%= currentData.currAction %>" />
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<%- include('partials/footer.ejs') %>
