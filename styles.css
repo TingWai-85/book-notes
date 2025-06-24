@@ -322,6 +322,18 @@ footer {
     background-color: #f3efea;
 }
 
+#read-though {
+    margin: 0 0 1rem 4rem;
+    padding: 1rem;
+    width: 300%;
+    font-size: 1rem;
+    border: 5px solid #887d5f;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #f3efea;
+    resize: vertical; 
+}
+
 .rating-system {
     direction: rtl;
     font-size: 2rem;
