@@ -56,7 +56,7 @@ Create a .env file in the root directory:
 ```bash
 touch .env
 ```
-Add the following variables (replace with your actual credentials):
+Open the .env file and add the following variables (replace with your actual credentials):
 ```env
 PG_USER=your_db_username
 PG_HOST="localhost"
