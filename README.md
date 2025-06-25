@@ -43,7 +43,7 @@ Before you begin, make sure the following are installed in your development envi
 
 ```bash
 git clone https://github.com/TingWai-85/book-notes.git
-cd book-note-website
+cd book-notes
 ```
 
 ### 2. Install Dependencies
