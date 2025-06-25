@@ -42,7 +42,7 @@ Before you begin, make sure the following are installed in your development envi
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/book-note-website.git
+git clone https://github.com/TingWai-85/book-notes.git
 cd book-note-website
 ```
 
