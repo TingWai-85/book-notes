@@ -74,6 +74,12 @@ The app will be accessible at: http://localhost:3000
 
 ---
 
+## 🎥 Video Tutorial
+
+Watch the setup tutorial on [YouTube](https://www.youtube.com/watch?v=vx5v4JAE2as).
+
+---
+
 ## 🔧 Future Enhancements
 
  - 🔐 Add user authentication (login, register)
