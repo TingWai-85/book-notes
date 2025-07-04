@@ -1,4 +1,10 @@
 # 📚 Book Note Website
+![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql)
+![EJS](https://img.shields.io/badge/EJS-Templating-orange?logo=ejs)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)
 
 The **Book Note Website** is a full-stack web application that allows users to store and manage books they have read. For each book, users can leave a review and assign a rating — making it a personal reading log and review system all in one.
 
